@@ -1,0 +1,14 @@
+While there isn't a perfect solution to guarantee consistent `:focus-visible` behavior across all platforms, a more robust approach involves providing a fallback style that ensures adequate focus indication for all users. This fallback maintains accessibility while trying to prioritize the `:focus-visible` for improved visual aesthetics when supported correctly. 
+
+```css
+.my-element:focus {
+  outline: 1px solid #ccc; /* Fallback outline */
+}
+
+.my-element:focus-visible {
+  outline: 2px solid blue;
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+}
+```
+
+This improved solution prioritizes accessibility by ensuring a focus indicator is always present. The `:focus` style acts as a fallback, while `:focus-visible` provides a more visually distinct style only when appropriate. This approach helps mitigate inconsistencies and ensures all users have clear focus indicators.
