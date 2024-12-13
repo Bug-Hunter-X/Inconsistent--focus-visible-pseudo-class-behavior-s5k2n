@@ -1,0 +1,12 @@
+The following CSS code snippet demonstrates an uncommon error related to the `:focus-visible` pseudo-class. It's intended to style focused elements only when the focus is not triggered programmatically (e.g., by JavaScript). However, there's a subtle issue where certain browser extensions or assistive technologies might interfere with the expected behavior.
+
+```css
+.my-element:focus-visible {
+  outline: 2px solid blue;
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+}
+```
+
+The problem is that the `:focus-visible` pseudo-class isn't universally supported across all browsers and assistive technologies in the same way.  Some might ignore it entirely, others might trigger it unexpectedly.
+
+Inconsistent behavior across different browsers, extensions and assistive technology makes it difficult to reliably ensure styling only applies when user explicitly focuses elements with keyboard or mouse. 
